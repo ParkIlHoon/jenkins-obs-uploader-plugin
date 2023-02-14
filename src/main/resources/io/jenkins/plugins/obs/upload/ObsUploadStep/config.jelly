@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:st="jelly:stapler" xmlns:c="/lib/credentials">
+  <f:entry field="host" title="호스트" description="Object Storage 엔드포인트" help="예시 : https://api-storage.cloud.toast.com">
+    <f:textbox />
+  </f:entry>
+
+  <f:entry field="credentialsId" title="자격 증명" description="AWS S3 자격증명 Secret Key 와 Access Key 를 각각 username 과 password 로 가지는 Credential 이 필요합니다.">
+    <c:select/>
+  </f:entry>
+
+  <f:entry field="containerName" title="컨테이너명">
+    <f:textbox />
+  </f:entry>
+
+  <f:entry field="targetFolder" title="타겟 디렉토리" description="파일이 업로드될 Object Storage 컨테이너의 디렉토리. 해당 디렉토리 하위에 파일이 업로드됩니다." help="Jenkins Environment Variable 사용 가능">
+    <f:textbox />
+  </f:entry>
+
+  <f:entry field="includes" title="업로드 포함 대상" description="GLOB pattern 으로 업로드 대상을 지정합니다." help="Jenkins Environment Variable 사용 가능">
+    <f:textbox />
+  </f:entry>
+
+  <f:entry field="excludes" title="업로드 제외 대상" description="GLOB pattern 으로 업로드 제외 대상을 지정합니다." help="Jenkins Environment Variable 사용 가능">
+    <f:textbox />
+  </f:entry>
+</j:jelly>
