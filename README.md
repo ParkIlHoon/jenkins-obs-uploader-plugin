@@ -1,11 +1,10 @@
 # jenkins-obs-uploader-plugin
 
 ## Introduction
-
-TODO Describe what your plugin does here
+NHN Cloud Object Storage에 아티팩트를 업로드하기 위한 Jenkins 플러그인
 
 ## Getting started
-
-TODO Tell users how to configure your plugin here, include screenshots, pipeline examples and 
-configuration-as-code examples.
+```bash
+mvn clean package
+```
 
